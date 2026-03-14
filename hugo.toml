@@ -9,7 +9,7 @@ theme = 'PaperMod'
 # SEO 및 애드센스에 중요한 설정
 [params]
   env = "production"
-  description = "개발자 ZINU가 직접 경험하고 정리한 기술 블로그"
+  description = "AI, 하드웨어, IT 테크를 직접 경험하고 정리하는 블로그"
   author = "ZINU"
   ShowReadingTime = true
   ShowShareButtons = true
@@ -22,7 +22,7 @@ theme = 'PaperMod'
 
   [params.homeInfoParams]
     Title = "안녕하세요, ZINU입니다"
-    Content = "기술, 개발, 그리고 일상에서 발견한 것들을 기록합니다."
+    Content = "AI, 하드웨어, IT 테크에 대해 직접 써보고 기록합니다."
 
   [[params.socialIcons]]
     name = "email"
