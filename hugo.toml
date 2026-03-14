@@ -9,6 +9,8 @@ theme = 'PaperMod'
 # SEO 및 애드센스에 중요한 설정
 [params]
   env = "production"
+  [params.verification]
+    google = "x0JeF7w4aDPkfpVEDsgxSEeeVuC7qfKM61BmrCeMTWA"
   description = "AI, 하드웨어, IT 테크를 직접 경험하고 정리하는 블로그"
   author = "ZINU"
   defaultTheme = "auto"
