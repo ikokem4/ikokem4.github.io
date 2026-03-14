@@ -1,0 +1,62 @@
+baseURL = 'https://ikokem4.github.io/'
+languageCode = 'ko'
+defaultContentLanguage = 'ko'
+title = 'AI 인사이트 블로그'
+theme = 'PaperMod'
+[pagination]
+  pagerSize = 10
+
+# SEO 및 애드센스에 중요한 설정
+[params]
+  env = "production"
+  description = "AI, 기술, 디지털 트렌드에 대한 인사이트를 제공하는 블로그"
+  author = "AI Insight"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  comments = false
+
+  [params.homeInfoParams]
+    Title = "AI 인사이트 블로그"
+    Content = "AI, 기술, 디지털 트렌드에 대한 깊이 있는 분석과 인사이트를 제공합니다."
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:your@email.com"
+
+# 메뉴 구성
+[[menu.main]]
+  identifier = "categories"
+  name = "카테고리"
+  url = "/categories/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "tags"
+  name = "태그"
+  url = "/tags/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "about"
+  name = "소개"
+  url = "/about/"
+  weight = 30
+
+[[menu.main]]
+  identifier = "privacy"
+  name = "개인정보처리방침"
+  url = "/privacy/"
+  weight = 40
+
+# SEO 설정
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.highlight]
+    noClasses = false
