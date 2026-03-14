@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(~/bin/hugo --minify 2>&1)",
+      "Bash(git add:*)"
+    ]
+  }
+}

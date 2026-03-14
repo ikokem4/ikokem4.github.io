@@ -7,7 +7,21 @@
 쉽게 비유하면 GPU = 요리사 VRAM = 조리대 일반 RAM = 냉장고 요리사(GPU)가 요리(연산)를 하려면 재료를 조리대(VRAM)에 올려놓아야 합니다. 조리대가 좁으면 재료를 다 올려놓지 못해서 냉장고(RAM)에서 왔다갔다 해야 하고, 그만큼 느려집니다.
 조리대가 넓으면? 재료를 한 번에 펼쳐놓고 빠르게 요리할 수 있습니다.
 게임할 때 VRAM 게임에서 VRAM은 주로 **텍스처(그래픽 데이터)**를 저장합니다.
-...</p></div><footer class=entry-footer><span title='2026-03-09 00:00:00 +0000 UTC'>2026년 3월 9일</span>&nbsp;·&nbsp;<span>2 분</span>&nbsp;·&nbsp;<span>ZINU</span></footer><a class=entry-link aria-label="post link to GPU의 VRAM이 뭔지, 왜 중요한지 쉽게 정리해봤다" href=https://ikokem4.github.io/posts/2026-03-09-gpu-vram-explained/></a></article></main><footer class=footer><span>&copy; 2026 <a href=https://ikokem4.github.io/>ZINU의 테크노트</a></span> ·
+...</p></div><footer class=entry-footer><span title='2026-03-09 00:00:00 +0000 UTC'>2026년 3월 9일</span>&nbsp;·&nbsp;<span>2 분</span>&nbsp;·&nbsp;<span>ZINU</span></footer><a class=entry-link aria-label="post link to GPU의 VRAM이 뭔지, 왜 중요한지 쉽게 정리해봤다" href=https://ikokem4.github.io/posts/2026-03-09-gpu-vram-explained/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>PC 쿨링의 모든 것 — 공랭, 수랭, 뭐가 다른 걸까?</h2></header><div class=entry-content><p>왜 쿨링이 중요한가 CPU든 GPU든 작동하면 열이 납니다. 열을 잘 못 식히면 쓰로틀링이 걸립니다. 쓰로틀링은 칩이 스스로 속도를 낮춰서 온도를 떨어뜨리는 건데, 결과적으로 성능이 떨어집니다.
+특히 AI 학습처럼 GPU를 오래 풀로드하는 작업에서는 쿨링이 성능을 직접적으로 좌우합니다.
+공랭 (Air Cooling) 말 그대로 팬(선풍기)으로 바람을 불어서 식히는 방식입니다.
+구조 히트싱크(금속 덩어리)가 CPU/GPU의 열을 흡수 → 팬이 바람을 불어서 열을 날림
+장점 구조가 간단해서 고장 날 게 적음 유지보수가 편함 (먼지만 청소하면 됨) 누수 걱정 없음 단점 성능 한계가 있음 (고성능 CPU에는 부족할 수 있음) 크기가 큰 공랭 쿨러는 RAM이나 케이스와 간섭할 수 있음 팬 소음이 있음 적합한 경우 일반 사용, 게임, 중급 AI 작업
+...</p></div><footer class=entry-footer><span title='2026-02-26 00:00:00 +0000 UTC'>2026년 2월 26일</span>&nbsp;·&nbsp;<span>2 분</span>&nbsp;·&nbsp;<span>ZINU</span></footer><a class=entry-link aria-label="post link to PC 쿨링의 모든 것 — 공랭, 수랭, 뭐가 다른 걸까?" href=https://ikokem4.github.io/posts/2026-02-26-cooling-solution/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>AI 작업에서 NVIDIA vs AMD — 왜 NVIDIA가 압도적일까?</h2></header><div class=entry-content><p>게임은 경쟁하는데 AI는 왜? 게임 GPU 시장에서 NVIDIA와 AMD는 치열하게 경쟁합니다. 세대에 따라 AMD가 앞서기도 하고, 가성비로는 AMD가 나을 때도 있습니다.
+그런데 AI 분야에서는 NVIDIA가 압도적입니다. 시장 점유율이 80% 이상이라고 합니다. 왜 이런 차이가 날까요?
+이유 1: CUDA 생태계 가장 큰 이유입니다. CUDA는 NVIDIA가 만든 GPU 프로그래밍 플랫폼입니다.
+AI/딥러닝의 핵심 프레임워크인 PyTorch, TensorFlow가 CUDA 기반으로 만들어졌습니다. 10년 넘게 CUDA 위에서 발전해온 거라, 최적화 수준이 다릅니다.
+AMD에도 ROCm이라는 대응 플랫폼이 있지만:
+...</p></div><footer class=entry-footer><span title='2026-02-23 00:00:00 +0000 UTC'>2026년 2월 23일</span>&nbsp;·&nbsp;<span>2 분</span>&nbsp;·&nbsp;<span>ZINU</span></footer><a class=entry-link aria-label="post link to AI 작업에서 NVIDIA vs AMD — 왜 NVIDIA가 압도적일까?" href=https://ikokem4.github.io/posts/2026-02-23-nvidia-vs-amd-ai/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>AI 하려면 리눅스를 써야 할까? — 솔직한 답변</h2></header><div class=entry-content><p>결론부터 입문 단계에서는 윈도우도 괜찮습니다. 하지만 본격적으로 AI를 하게 되면 리눅스가 편해지는 시점이 옵니다.
+왜 AI 쪽에서 리눅스를 많이 쓰나 1. 대부분의 AI 도구가 리눅스 우선 PyTorch, TensorFlow 등 주요 AI 프레임워크가 리눅스에서 먼저 개발되고 테스트됩니다. 윈도우 지원은 뒤따라오거나, 일부 기능이 빠지기도 합니다.
+2. CUDA 설치가 더 쉬움 윈도우에서 CUDA 설치하다가 버전 충돌로 삽질하는 경우가 많습니다. 리눅스에서는 패키지 매니저로 깔끔하게 설치됩니다.
+3. Docker가 네이티브 Docker가 리눅스 기반 기술이라, 리눅스에서 성능이 더 좋고 호환 문제도 적습니다. 윈도우에서 Docker는 WSL2를 거치기 때문에 약간의 오버헤드가 있습니다.
+...</p></div><footer class=entry-footer><span title='2026-02-18 00:00:00 +0000 UTC'>2026년 2월 18일</span>&nbsp;·&nbsp;<span>2 분</span>&nbsp;·&nbsp;<span>ZINU</span></footer><a class=entry-link aria-label="post link to AI 하려면 리눅스를 써야 할까? — 솔직한 답변" href=https://ikokem4.github.io/posts/2026-02-18-linux-for-ai/></a></article></main><footer class=footer><span>&copy; 2026 <a href=https://ikokem4.github.io/>ZINU의 테크노트</a></span> ·
 <span>Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
         <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
