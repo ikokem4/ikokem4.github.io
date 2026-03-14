@@ -1,0 +1,246 @@
+/* === ZINU's 테크노트 — 따뜻한 도시 테마 === */
+
+/* 한글 폰트 (Pretendard + Noto Serif KR) */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap');
+
+/* === 라이트 모드 — 따뜻한 베이지 톤 === */
+:root {
+    --theme: #f5efe6;
+    --entry: #fff8f0;
+    --primary: #3a3a3a;
+    --secondary: #7a6652;
+    --tertiary: #e8ddd3;
+    --content: #4a4035;
+    --hljs-bg: #f0e8dc;
+    --code-bg: #f0e8dc;
+    --border: #e0d5c7;
+    --gap: 24px;
+    --radius: 12px;
+}
+
+/* === 다크 모드 — 따뜻한 야경 톤 === */
+.dark {
+    --theme: #1a1612;
+    --entry: #2a2420;
+    --primary: #e8ddd3;
+    --secondary: #c4a882;
+    --tertiary: #332c26;
+    --content: #d4c8b8;
+    --hljs-bg: #2a2420;
+    --code-bg: #2a2420;
+    --border: #3d352e;
+}
+
+/* 전체 폰트 */
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.02em;
+    line-height: 1.8;
+}
+
+/* 제목 폰트 — 세리프로 포인트 */
+.post-title,
+.entry-header h2,
+h1, h2 {
+    font-family: 'Noto Serif KR', serif;
+    letter-spacing: -0.03em;
+}
+
+/* 메인 헤더 */
+.nav {
+    backdrop-filter: blur(10px);
+    background: rgba(245, 239, 230, 0.85);
+}
+.dark .nav {
+    background: rgba(26, 22, 18, 0.85);
+}
+
+/* 홈 인포 영역 */
+.first-entry {
+    border: none;
+    background: linear-gradient(135deg, #e8ddd3 0%, #f5efe6 50%, #faf6f0 100%);
+    border-radius: var(--radius);
+    padding: 40px 30px;
+    margin-bottom: 30px;
+}
+.dark .first-entry {
+    background: linear-gradient(135deg, #2a2420 0%, #1a1612 50%, #221e1a 100%);
+}
+
+.first-entry .entry-header h1 {
+    font-size: 1.8em;
+    color: var(--primary);
+}
+
+/* 글 카드 스타일 */
+.post-entry {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 16px;
+    transition: all 0.3s ease;
+    background: var(--entry);
+}
+.post-entry:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(122, 102, 82, 0.12);
+    border-color: var(--secondary);
+}
+.dark .post-entry:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* 글 제목 링크 */
+.entry-header h2 a {
+    color: var(--primary);
+}
+.entry-header h2 a:hover {
+    color: var(--secondary);
+}
+
+/* 본문 스타일 */
+.post-content {
+    font-size: 1.05em;
+    color: var(--content);
+}
+.post-content h2 {
+    margin-top: 2em;
+    padding-bottom: 0.4em;
+    border-bottom: 2px solid var(--tertiary);
+    color: var(--primary);
+}
+.post-content h3 {
+    color: var(--secondary);
+}
+
+/* 강조 텍스트 */
+.post-content strong {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* 링크 색상 — 따뜻한 앰버 */
+.post-content a {
+    color: #b8860b;
+    text-decoration: underline;
+    text-decoration-color: rgba(184, 134, 11, 0.3);
+    text-underline-offset: 3px;
+}
+.post-content a:hover {
+    text-decoration-color: #b8860b;
+}
+
+/* 인라인 코드 */
+.post-content code {
+    background: var(--code-bg);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 0.9em;
+}
+
+/* 코드 블록 */
+.post-content pre {
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+/* 테이블 스타일 */
+.post-content table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1.5em 0;
+}
+.post-content table th {
+    background: var(--tertiary);
+    color: var(--primary);
+    font-weight: 700;
+    padding: 10px 14px;
+}
+.post-content table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* 인용문 */
+.post-content blockquote {
+    border-left: 3px solid var(--secondary);
+    background: var(--tertiary);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 16px 20px;
+    margin: 1.5em 0;
+}
+
+/* 목차 */
+.toc {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+}
+
+/* 태그 */
+.post-tags a {
+    background: var(--tertiary);
+    color: var(--secondary);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 0.85em;
+    transition: all 0.2s ease;
+}
+.post-tags a:hover {
+    background: var(--secondary);
+    color: white;
+}
+
+/* 카테고리/태그 페이지 */
+.terms-tags a {
+    border-radius: 20px !important;
+    transition: all 0.2s ease;
+}
+
+/* 페이지 네비게이션 */
+.paginav a {
+    border-radius: var(--radius);
+    border-color: var(--border);
+    transition: all 0.2s ease;
+}
+.paginav a:hover {
+    background: var(--tertiary);
+    border-color: var(--secondary);
+}
+
+/* 푸터 */
+.footer {
+    color: var(--secondary);
+    opacity: 0.8;
+}
+
+/* 스크롤바 커스텀 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--theme);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+}
+
+/* 부드러운 스크롤 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 반응형 — 모바일 */
+@media (max-width: 768px) {
+    .first-entry {
+        padding: 24px 18px;
+    }
+    .post-content {
+        font-size: 1em;
+    }
+}
