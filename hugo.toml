@@ -25,20 +25,15 @@ theme = 'PaperMod'
   TocOpen = false
   comments = false
 
-  [params.profileMode]
-    enabled = true
-    title = "안녕하세요, ZINU입니다"
-    subtitle = "AI, 하드웨어, IT 테크에 대해 직접 써보고 기록합니다."
-    imageUrl = "/images/profile.jpg"
-    imageWidth = 160
-    imageHeight = 160
-    imageTitle = "ZINU's 테크노트"
+  [params.homeInfoParams]
+    Title = "안녕하세요, ZINU입니다"
+    Content = "AI, 하드웨어, IT 테크에 대해 직접 써보고 기록합니다."
+    ImageUrl = "/images/profile.jpg"
+    ImageWidth = 160
+    ImageHeight = 160
+    ImageTitle = "ZINU's 테크노트"
 
-    [[params.profileMode.buttons]]
-      name = "글 보기"
-      url = "/posts/"
-
-    [[params.profileMode.buttons]]
+    [[params.homeInfoParams.buttons]]
       name = "소개"
       url = "/about/"
 

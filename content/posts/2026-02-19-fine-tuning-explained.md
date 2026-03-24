@@ -60,7 +60,7 @@ LoRA에 양자화를 결합한 방식. 더 적은 VRAM으로 파인튜닝 가능
 | 비용 | GPU 비용 발생 | 검색 인프라 비용 |
 | 적합한 경우 | 말투/스타일 변경, 특화 지식 | 최신 정보, 대량 문서 참조 |
 
-둘을 같이 쓰면 더 좋습니다. 파인튜닝으로 말투와 기본 지식을 세팅하고, RAG로 최신 정보를 보완하는 식입니다.
+둘을 같이 쓰면 더 좋습니다. 파인튜닝으로 말투와 기본 지식을 세팅하고, [RAG로 최신 정보를 보완](/posts/2026-02-21-rag-explained/)하는 식입니다.
 
 ## 개인이 해볼 수 있나?
 
@@ -68,8 +68,8 @@ LoRA에 양자화를 결합한 방식. 더 적은 VRAM으로 파인튜닝 가능
 
 필요한 것:
 - **데이터** — 학습시킬 질문-답변 쌍 (수백~수천 개)
-- **GPU** — VRAM 12GB 이상 (QLoRA 기준)
-- **도구** — Hugging Face의 transformers, PEFT 라이브러리
+- **GPU** — VRAM 12GB 이상 (QLoRA 기준). [GPU VRAM이 왜 중요한지](/posts/2026-03-09-gpu-vram-explained/) 이해하면 도움이 됩니다.
+- **도구** — [Hugging Face](/posts/2026-02-10-huggingface-intro/)의 transformers, PEFT 라이브러리
 
 Google Colab에서도 간단한 파인튜닝이 가능합니다.
 
