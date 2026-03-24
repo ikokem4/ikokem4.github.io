@@ -42,6 +42,13 @@ theme = 'PaperMod'
       name = "소개"
       url = "/about/"
 
+  # Open Graph / SNS 공유 최적화
+  images = ["/images/profile.jpg"]
+
+  [params.cover]
+    linkFullImages = true
+    responsiveImages = true
+
   [[params.socialIcons]]
     name = "email"
     url = "mailto:ikokem4@gmail.com"
